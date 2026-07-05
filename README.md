@@ -1,6 +1,6 @@
 # Eevee Spotify Legacy iOS 13
 
-Private archival repo for the iOS 13 / Spotify 8.8.2 compatibility work done on an older iPhone.
+Public archival repo for the iOS 13 / Spotify 8.8.2 compatibility work done on an older iPhone.
 
 The practical goal was simple: make an otherwise barely usable legacy phone useful again as a music device. Current Spotify releases no longer support that iOS version, and the older app needed a compatibility tweak to recover a clean, usable listening experience.
 
@@ -35,3 +35,25 @@ The source targets Spotify 8.8.2 because that was the latest compatible version 
 Compatibility with other Spotify versions or other iOS releases has not been validated. iOS 13.x with Spotify 8.8.2 is the known target.
 
 Remaining technical notes are tracked in `docs/technical-notes.md`.
+
+## Credits
+
+This is a vibe-coded, AI-assisted compatibility experiment. The implementation was built through iterative testing on a real iOS 13 device, with the user directing the work and AI coding assistants helping inspect symbols, adjust hooks, build packages, and assemble the local test IPA.
+
+Technical inspiration and ecosystem credits:
+
+- Whoeevee / EeveeSpotify, for the modern EeveeSpotify project and the key free-tier resolver approach this experiment learned from.
+- julioverne / Spotilife, for the original Spotilife lineage and older Spotify tweak work.
+- Theos Team, for the iOS tweak build system.
+- LRCLIB, for the public lyrics API used by the replacement lyrics view.
+- CydiaSubstrate / Substitute ecosystem, for runtime tweak injection support on jailbroken devices.
+
+## Disclaimer
+
+We are not affiliated, associated, authorized, endorsed by, or in any way officially connected with any other company, agency, or government agency. All product and company names are trademarks(tm) or registered(r) trademarks of their respective holders. Use of them does not imply any affiliation with or endorsement by them.
+
+The software is provided "as is," without any warranties, whether express or implied, including but not limited to warranties of merchantability or fitness for a particular purpose. The developers make no guarantees regarding the software's performance, reliability, or accuracy. In no event shall the developers be held liable for any claim, damages, or other liability, whether in an action of contract, tort, or otherwise, arising from, out of, or in connection with the software or its use. Use of this software is at your own risk.
+
+Furthermore, the software may utilize or depend on third-party software, libraries, or services. The developers are not liable for any issues, errors, or damages resulting from the use of such third-party components. The providers of those components are likewise not responsible for any liabilities arising from their use in this software.
+
+By using this software, you acknowledge and accept full responsibility for any risks associated with its use.

@@ -25,14 +25,15 @@ Known local artifacts from the original session:
 ## Build The Tweak
 
 ```sh
-THEOS=/Users/nono/theos make package
+./scripts/build-tweak.sh
 ```
 
 The project targets arm64, iOS 13.0 minimum, and the Theos iPhoneOS 16.5 SDK to avoid the iOS 13 loader issues observed with newer SDK output.
+
+The repo lives under `New project`, whose path contains a space. Theos refuses to build from paths with spaces, so `scripts/build-tweak.sh` mirrors the source into `/tmp/eevee-spotify-legacy-ios13-build` before running `make package`.
 
 ## Current Status
 
 The last working source snapshot is v83. It was tested by pushing the dylib into the installed app and then used to build a standalone IPA named `Spotify-EeveeLegacy-8.8.2.ipa`.
 
 Remaining notes are tracked in `docs/progress-review.md`.
-

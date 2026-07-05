@@ -1,0 +1,9 @@
+Package: com.eevee.spotify.legacy
+Name: EeveeSpotifyLegacy
+Version: 0.1.0
+Architecture: iphoneos-arm
+Description: EeveeSpotify port for iOS 13 / Spotify 8.8.2
+Maintainer: Eevee
+Author: Eevee
+Section: Tweaks
+Depends: firmware (>= 13.0)

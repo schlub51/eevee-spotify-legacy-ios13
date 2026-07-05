@@ -1,0 +1,16 @@
+.DS_Store
+.theos/
+packages/
+*.deb
+*.ipa
+*.dylib
+*.dylib.reference
+artifacts/*.reference
+artifacts/*.plist
+artifacts/*.ipa
+artifacts/*.deb
+artifacts/*.dylib
+artifacts/base/
+artifacts/work/
+artifacts/output/
+*.log

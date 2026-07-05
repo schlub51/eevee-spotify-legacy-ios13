@@ -16,6 +16,8 @@ The practical goal was simple: make an otherwise barely usable legacy phone usef
 
 This repo intentionally does not track Spotify IPAs, decrypted app bundles, compiled dylibs, `.deb` packages, or other proprietary/heavy artifacts. Those stay local only.
 
+See `DISCLAIMER.md` for affiliation, warranty, third-party component, and responsibility disclaimers.
+
 Known local artifacts from the original session:
 
 - Final IPA: `/Users/nono/Downloads/Spotify-EeveeLegacy-8.8.2.ipa`

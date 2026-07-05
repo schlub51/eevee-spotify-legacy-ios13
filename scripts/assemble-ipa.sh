@@ -10,7 +10,7 @@ BASE_IPA="$1"
 TWEAK_DYLIB="$2"
 OUTPUT_IPA="$3"
 WORKDIR="${WORKDIR:-/tmp/eevee-ipa-assemble}"
-THEOS_SDK="${THEOS_SDK:-/Users/nono/theos/sdks/iPhoneOS16.5.sdk}"
+THEOS_SDK="${THEOS_SDK:-$HOME/theos/sdks/iPhoneOS16.5.sdk}"
 LOAD_SLOT="${LOAD_SLOT:-Spotilife.dylib}"
 
 rm -rf "$WORKDIR"

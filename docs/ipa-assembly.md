@@ -1,13 +1,13 @@
 # IPA Assembly Notes
 
-These notes document the local packaging route used during the session. They are intentionally source-only notes; proprietary app bundles and generated IPAs are not tracked.
+These notes document the packaging shape used for local testing. They are intentionally source-only notes; proprietary app bundles and generated IPAs are not tracked.
 
 ## Inputs
 
-- Base IPA: `/Users/nono/Downloads/Spotify ++ 8.8.2 [starfiles.co].ipa`
-- Built tweak dylib: `/tmp/eevee-ios13/.theos/obj/debug/arm64/0Eevee.dylib`
-- Local assembly workspace: `/tmp/eevee-ipa`
-- Final output: `/Users/nono/Downloads/Spotify-EeveeLegacy-8.8.2.ipa`
+- A locally available, decrypted Spotify 8.8.2 IPA
+- A built `0Eevee.dylib` from this Theos project
+- A temporary local assembly workspace
+- A locally generated output IPA
 
 ## Packaging Shape
 
@@ -20,7 +20,7 @@ The IPA already contained tweak loading slots:
 
 The working assembly path replaced the active tweak dylib with the newly built Eevee legacy tweak and replaced unused companion tweak slots with no-op stubs.
 
-The later final package normalized the naming to `EeveeLegacy.dylib` to remove confusion between the load slot and the actual tweak identity.
+The load slot name may differ from the tweak identity depending on the base IPA. The helper script defaults to the existing `Spotilife.dylib` slot because it is commonly present in the tested base.
 
 ## Verification Used
 
@@ -31,7 +31,7 @@ otool -L Frameworks/Spotilife.dylib
 nm -u Frameworks/Spotilife.dylib | grep MSHook
 ldid -e Payload/Spotify.app/Spotify
 ldid -h Frameworks/Spotilife.dylib
-unzip -l Spotify-EeveeLegacy-8.8.2.ipa
+unzip -l output.ipa
 ```
 
 Expected signs:
@@ -40,4 +40,3 @@ Expected signs:
 - `_MSHookMessageEx` is present.
 - Spotify entitlements are preserved before fakesigning.
 - The output IPA contains the main app binary, the tweak dylib, no-op stubs, and CydiaSubstrate.
-

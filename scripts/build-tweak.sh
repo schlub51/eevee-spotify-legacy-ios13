@@ -2,7 +2,7 @@
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-THEOS="${THEOS:-/Users/nono/theos}"
+THEOS="${THEOS:-$HOME/theos}"
 BUILD_ROOT="${BUILD_ROOT:-/tmp/eevee-spotify-legacy-ios13-build}"
 
 rm -rf "$BUILD_ROOT"

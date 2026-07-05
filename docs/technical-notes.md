@@ -2,34 +2,36 @@
 
 ## Target
 
-This tweak targets Spotify 8.8.2 on iOS 13.x. That app version was selected because it was the latest compatible Spotify release offered by the App Store on the test device.
+Known target: Spotify 8.8.2 on iOS 13.x.
 
-The project has not been validated on other Spotify releases or other iOS versions. Compatibility with iOS 12, iOS 14+, or Spotify 8.6/8.7-era builds should be treated as unknown until tested.
+Spotify 8.8.2 was chosen because it was the newest compatible version offered by the App Store on the test device.
 
-The committed source is the latest local tweak snapshot from the original session. It includes the v58 product-state hook work as well as later UI and lyrics fixes.
+Other Spotify versions and iOS releases are untested.
+
+The committed source is the latest local snapshot. It includes the v58 product-state work plus later UI and lyrics fixes.
 
 ## Key Implementation Points
 
 1. Product-state handling
 
-Spotify 8.8.2 no longer matched older Spotilife-era assumptions around `SPTProductState`. The tweak instead works through the classes available in this build, including `SPTCoreProductState`, `RCCFetchResponseHandler`, and auth session product-state update hooks.
+Spotify 8.8.2 did not match older Spotilife-era `SPTProductState` assumptions. This version uses `SPTCoreProductState`, `RCCFetchResponseHandler`, and auth session product-state hooks instead.
 
 2. Artist and album page behavior
 
-The main playback/navigation breakthrough was targeting the free-tier artist and album hub resolvers:
+The key playback/navigation hooks are:
 
 - `SPTFreeTierArtistHubRemoteURLResolver`
 - `SPTFreeTierAlbumHubRemoteURLResolver`
 
-The important methods are `isOnDemandTrialEnabled` and `trackRowsEnabled`.
+Main methods: `isOnDemandTrialEnabled` and `trackRowsEnabled`.
 
 3. UI cleanup
 
-The tweak removes the Premium tab from the adaptive tab bar and normalizes the visible account label in the UI. This is cosmetic and scoped to the client interface.
+Removes the Premium tab and normalizes the visible account label.
 
 4. Lyrics replacement
 
-Spotify's native lyrics path was not usable in this legacy setup, so the tweak injects a text view into the native lyrics controllers and fetches lyrics through LRCLIB.
+Injects a text view into Spotify's lyrics controllers and fetches lyrics through LRCLIB.
 
 Implementation details:
 
@@ -43,7 +45,7 @@ Implementation details:
 
 ## Build Notes
 
-The tweak is built with Theos for arm64 and an iOS 13.0 minimum deployment target.
+The tweak is built with Theos for arm64 and iOS 13.0+.
 
 The local helper builds from `/tmp` because Theos does not accept project paths containing spaces.
 

@@ -6,6 +6,8 @@ This tweak targets Spotify 8.8.2 on iOS 13.x. That app version was selected beca
 
 The project has not been validated on other Spotify releases or other iOS versions. Compatibility with iOS 12, iOS 14+, or Spotify 8.6/8.7-era builds should be treated as unknown until tested.
 
+The committed source is the latest local tweak snapshot from the original session. It includes the v58 product-state hook work as well as later UI and lyrics fixes.
+
 ## Key Implementation Points
 
 1. Product-state handling
@@ -51,4 +53,4 @@ The local helper builds from `/tmp` because Theos does not accept project paths 
 - Compatibility with lower or higher Spotify versions is unknown.
 - Compatibility with iOS 12 or iOS 14+ is unknown.
 - Some behavior may still depend on server-side Spotify responses.
-- Generated IPAs, app bundles, and compiled packages are intentionally not tracked.
+- Generated IPAs, app bundles, and compiled packages are intentionally not tracked or published.

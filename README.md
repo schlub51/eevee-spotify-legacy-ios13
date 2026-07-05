@@ -16,6 +16,8 @@ The practical goal was simple: make an otherwise barely usable legacy phone usef
 
 This repo intentionally does not track Spotify IPAs, decrypted app bundles, compiled dylibs, `.deb` packages, or other proprietary/heavy artifacts. Those stay local only.
 
+No IPA is published here because an IPA would include Spotify's proprietary application bundle. The repo is source-only so people can inspect the tweak and build against their own locally obtained compatible app copy.
+
 See `DISCLAIMER.md` for affiliation, warranty, third-party component, and responsibility disclaimers.
 
 ## Build The Tweak
@@ -31,6 +33,8 @@ The repo lives under `New project`, whose path contains a space. Theos refuses t
 ## Current Status
 
 The source targets Spotify 8.8.2 because that was the latest compatible version offered by the App Store on the iOS 13 device used for testing.
+
+The tracked source is the latest local tweak snapshot from the session. It includes the v58 product-state work and the later lyrics/fullscreen fixes.
 
 Compatibility with other Spotify versions or other iOS releases has not been validated. iOS 13.x with Spotify 8.8.2 is the known target.
 

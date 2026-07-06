@@ -9,6 +9,7 @@ I made this because an old iPhone was still useful as a music device, and Spotif
 - The Theos tweak source: `Tweak.x`
 - Theos packaging files: `Makefile`, `control`, `0Eevee.plist`
 - Technical notes: `docs/technical-notes.md`
+- Install/build guide: `docs/install.md`
 - IPA assembly notes: `docs/ipa-assembly.md`
 - Rebuild helpers in `scripts/`
 
@@ -19,6 +20,8 @@ No IPA, app bundle, `.deb`, or compiled dylib is included. This is source only.
 See `DISCLAIMER.md` for affiliation, warranty, third-party component, and responsibility disclaimers.
 
 ## Build The Tweak
+
+See `docs/install.md` for the full flow.
 
 ```sh
 ./scripts/build-tweak.sh

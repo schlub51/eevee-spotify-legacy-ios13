@@ -15,13 +15,17 @@ I made this because an old iPhone was still useful as a music device, and Spotif
 
 ## Not Included
 
-No IPA, app bundle, `.deb`, or compiled dylib is included. This is source only.
+No IPA or app bundle is included.
+
+GitHub releases may include a compiled `.deb` for jailbroken devices. The repo itself keeps generated packages out of Git.
 
 See `DISCLAIMER.md` for affiliation, warranty, third-party component, and responsibility disclaimers.
 
 ## Build The Tweak
 
 See `docs/install.md` for the full flow.
+
+If you just want to test it on a jailbroken iOS 13 device, check the latest GitHub release first.
 
 ```sh
 ./scripts/build-tweak.sh

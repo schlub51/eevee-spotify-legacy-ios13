@@ -26,6 +26,16 @@ On the phone:
 - Substrate/Substitute-style tweak injection
 - Spotify 8.8.2 installed
 
+## Easiest Path: Download The Deb
+
+Open the latest GitHub release, download the `.deb`, copy it to the phone, and install it with your usual jailbreak package flow.
+
+Release page:
+
+```text
+https://github.com/schlub51/eevee-spotify-legacy-ios13/releases
+```
+
 ## Option 1: Build And Install The Deb
 
 Build:
@@ -93,4 +103,3 @@ Install the resulting IPA with your normal sideloading/TrollStore-style workflow
 - This is not a polished release pipeline.
 - The known target is iOS 13.x + Spotify 8.8.2.
 - If something breaks on another setup, open an issue with device, iOS version, Spotify version, and install method.
-

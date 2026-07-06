@@ -55,4 +55,5 @@ The local helper builds from `/tmp` because Theos does not accept project paths 
 - Compatibility with lower or higher Spotify versions is unknown.
 - Compatibility with iOS 12 or iOS 14+ is unknown.
 - Some behavior may still depend on server-side Spotify responses.
-- Generated IPAs, app bundles, and compiled packages are intentionally not tracked or published.
+- Generated IPAs and app bundles are not tracked or published.
+- GitHub releases may include a compiled `.deb` containing only the tweak files.
